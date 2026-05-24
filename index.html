@@ -603,20 +603,40 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-text { padding: 60px 30px 40px; }
-    .hero-image { padding: 0 30px 60px; }
-    .stats { flex-wrap: wrap; gap: 40px; padding: 40px 30px; }
-    .problem { padding: 60px 30px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-text { padding: 50px 20px 30px; }
+    .hero-text h1 { font-size: 32px; }
+    .hero-sub { font-size: 15px; }
+    .hero-cta { font-size: 15px; padding: 16px 28px; width: 100%; text-align: center; display: block; }
+    .hero-image { padding: 0 20px 50px; justify-content: center; }
+    .book-mockup { width: 220px; height: 220px; }
+    .stats { flex-wrap: wrap; gap: 24px; padding: 30px 20px; justify-content: center; }
+    .stat-number { font-size: 32px; }
+    section[style*="padding: 100px 80px"] { padding: 60px 20px !important; }
+    .problem { padding: 60px 20px; }
+    .section-title { font-size: 28px; }
+    .section-body { font-size: 15px; }
     .pain-list { grid-template-columns: 1fr; }
-    .solution { padding: 60px 30px; }
+    .solution { padding: 60px 20px; }
     .solution-inner { grid-template-columns: 1fr; gap: 40px; }
-    .plan { padding: 60px 30px; }
-    .weeks-grid { grid-template-columns: 1fr 1fr; }
-    .pricing { padding: 60px 30px; }
-    .price-card { padding: 40px 30px; }
+    .solution-text .section-title { font-size: 28px; }
+    .plan { padding: 60px 20px; }
+    .weeks-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .week-card { padding: 20px 14px; }
+    .week-title { font-size: 14px; }
+    .week-items { font-size: 12px; }
+    .pricing { padding: 60px 20px; }
+    .price-card { padding: 36px 24px; margin: 40px 0 0; }
+    .price-amount { font-size: 56px; }
+    .buy-btn { font-size: 16px; padding: 18px; }
     .chapters-grid { grid-template-columns: 1fr; }
-    footer { padding: 30px; }
+    footer { padding: 30px 20px; }
+  }
+
+  @media (max-width: 400px) {
+    .hero-text h1 { font-size: 28px; }
+    .weeks-grid { grid-template-columns: 1fr; }
+    .stats { gap: 20px; }
   }
 </style>
 </head>
@@ -628,7 +648,7 @@
     <span class="hero-badge">✦ E-Book de Saúde e Bem-Estar</span>
     <h1>Transforma o teu corpo em <em>30 dias</em></h1>
     <p class="hero-sub">Sem dietas extremas, sem suplementos caros e sem passar fome. Um guia prático com plano semanal, receitas e tudo o que precisas para começar hoje.</p>
-    <a href="https://pay.hotmart.com/S105879201N" class="hero-cta">Quero transformar a minha saúde →</a>
+    <a href="LINK_HOTMART_AQUI" class="hero-cta">Quero transformar a minha saúde →</a>
     <span class="hero-price-note">Acesso imediato por apenas R$ 47,00</span>
   </div>
   <div class="hero-image">
@@ -773,7 +793,7 @@
       <div class="price-include-item"><span class="icon">💡</span> 20+ dicas aplicáveis imediatamente</div>
       <div class="price-include-item"><span class="icon">♾️</span> Acesso vitalício e atualizações</div>
     </div>
-    <a href="https://pay.hotmart.com/S105879201N" class="buy-btn">Quero o meu e-book agora →</a>
+    <a href="LINK_HOTMART_AQUI" class="buy-btn">Quero o meu e-book agora →</a>
     <div class="guarantee">🔒 Garantia de 30 dias — reembolso total se não ficares satisfeito</div>
   </div>
 </section>
