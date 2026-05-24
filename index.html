@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corpo em Equilíbrio — Guia Completo para Emagrecer, Ganhar Energia e Transformar sua Saúde em 30 Dias</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0e0e0e;
+    --white: #f7f4ef;
+    --cream: #f2edd8;
+    --green: #2d4a1e;
+    --green-light: #4a7a2e;
+    --green-pale: #d6e8c4;
+    --amber: #e8a020;
+    --amber-dark: #c47f00;
+    --red: #c0392b;
+    --text-muted: #6b6b5a;
+    --border: rgba(0,0,0,0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #2d4a1e 0%, transparent 70%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #c47f00 0%, transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+  }
+
+  .nav-cta {
+    background: var(--amber);
+    color: var(--black);
+    border: none;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+
+  .nav-cta:hover { background: var(--amber-dark); }
+
+  .hero-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 2rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--green);
+    color: #a8d070;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero h1 span { color: var(--amber); }
+
+  .hero-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(247,244,239,0.72);
+    margin-bottom: 2.2rem;
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  .hero-bullets {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .hero-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: rgba(247,244,239,0.85);
+  }
+
+  .hero-bullets li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #a8d070;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--amber);
+    color: var(--black);
+    padding: 1.1rem 2.4rem;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.15s, background 0.2s;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  .btn-hero:hover { background: var(--amber-dark); transform: translateY(-2px); animation: none; }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(232,160,32,0.5); }
+    50% { box-shadow: 0 0 0 12px rgba(232,160,32,0); }
+  }
+
+  .hero-guarantee {
+    margin-top: 0.9rem;
+    font-size: 0.78rem;
+    color: rgba(247,244,239,0.45);
+    letter-spacing: 0.02em;
+  }
+
+  /* hero visual */
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(4px);
+    transition: border-color 0.2s;
+  }
+
+  .stat-card:hover { border-color: rgba(255,255,255,0.22); }
+
+  .stat-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--amber);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    color: rgba(247,244,239,0.6);
+    margin-top: 0.15rem;
+  }
+
+  /* ── SOCIAL PROOF BAR ── */
+  .proof-bar {
+    background: var(--green);
+    color: var(--green-pale);
+    padding: 0.85rem 2rem;
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .proof-bar strong { color: #c8e89a; }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    line-height: 0.95;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.02em;
+  }
+
+  .section-lead {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.75;
+  }
+
+  /* ── PROBLEM ── */
+  .problem-section {
+    background: #f0ece0;
+    border-top: 4px solid var(--black);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .problem-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .problem-card::before {
+    content: '✗';
+    position: absolute;
+    top: -12px; left: 1.5rem;
+    background: var(--red);
+    color: white;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .problem-card h3 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+  }
+
+  .problem-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── WHAT YOU GET ── */
+  .chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  .chapter:last-child { border-bottom: none; }
+  .chapter:hover { background: #f5f2e8; }
+
+  .chapter-num {
+    background: var(--black);
+    color: var(--amber);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chapter-content {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .chapter-content h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .chapter-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ── PILLARS ── */
+  .pillars-section {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .pillar {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .pillar:nth-child(1)::before { background: var(--amber); }
+  .pillar:nth-child(2)::before { background: #4a9a40; }
+  .pillar:nth-child(3)::before { background: #4a80c4; }
+
+  .pillar-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+  .pillar h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.7rem;
+    color: var(--white);
+  }
+
+  .pillar p {
+    font-size: 0.88rem;
+    color: rgba(247,244,239,0.65);
+    line-height: 1.7;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .testi {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.8rem;
+    position: relative;
+  }
+
+  .testi::before {
+    content: '"';
+    font-family: 'Fraunces', serif;
+    font-size: 5rem;
+    color: var(--green-pale);
+    position: absolute;
+    top: -0.5rem; left: 1rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .testi-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testi-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #a8d070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .testi-name { font-weight: 600; font-size: 0.9rem; }
+  .testi-role { font-size: 0.78rem; color: var(--text-muted); }
+
+  .stars { color: var(--amber); font-size: 0.85rem; margin-bottom: 0.5rem; }
+
+  /* ── BONUS ── */
+  .bonus-section { background: var(--green); }
+
+  .bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .bonus-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: var(--green-pale);
+  }
+
+  .bonus-card .tag {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--black);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    margin-bottom: 0.8rem;
+  }
+
+  .bonus-card h3 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    margin-bottom: 0.4rem;
+  }
+
+  .bonus-card p { font-size: 0.82rem; line-height: 1.6; }
+
+  /* ── PRICING ── */
+  .pricing-section { text-align: center; }
+
+  .price-box {
+    max-width: 480px;
+    margin: 3rem auto 0;
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .price-header {
+    background: var(--black);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+  }
+
+  .price-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.4rem;
+  }
+
+  .price-header p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .price-body {
+    background: var(--white);
+    padding: 2rem;
+  }
+
+  .price-old {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+
+  .price-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .price-currency {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  .price-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .price-includes {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .price-includes li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .price-includes li::before {
+    content: '✓';
+    color: var(--green-light);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .btn-buy {
+    display: block;
+    width: 100%;
+    background: var(--amber);
+    color: var(--black);
+    border: none;
+    padding: 1.2rem;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    animation: pulse 2.5s ease-in-out infinite;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-buy:hover { background: var(--amber-dark); transform: translateY(-2px); animation: none; }
+
+  .price-footer {
+    padding: 1.2rem 2rem;
+    background: #f8f5ee;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── GUARANTEE ── */
+  .guarantee-section { background: #f0ece0; border-top: 4px solid var(--green); }
+
+  .guarantee-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .guarantee-badge {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 1rem;
+    line-height: 1.2;
+  }
+
+  .guarantee-badge .big { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; }
+  .guarantee-badge .small { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+
+  /* ── FAQ ── */
+  .faq-list {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.3rem 1.5rem;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.15s;
+  }
+
+  .faq-q:hover { background: #f5f2e8; }
+  .faq-q span { font-size: 1.2rem; transition: transform 0.25s; flex-shrink: 0; color: var(--green-light); }
+
+  .faq-a {
+    display: none;
+    padding: 0 1.5rem 1.3rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .faq-item.open .faq-q span { transform: rotate(45deg); }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #2d4a1e 0%, transparent 65%);
+    opacity: 0.5;
+  }
+
+  .final-cta .section-title { position: relative; z-index: 1; color: var(--white); }
+  .final-cta .section-lead { position: relative; z-index: 1; margin: 0 auto 2.5rem; color: rgba(247,244,239,0.7); }
+  .final-cta .btn-hero { position: relative; z-index: 1; margin: 0 auto; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a0a0a;
+    color: rgba(255,255,255,0.35);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .hero-body { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem 1.5rem 4rem; }
+    .hero-visual { display: none; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .guarantee-inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <nav class="nav">
+    <div class="logo">Corpo em Equilíbrio</div>
+    <a href="https://go.hotmart.com/S105879201N?dp=1" class="nav-cta">Quero Começar</a>
+  </nav>
+
+  <div class="hero-body">
+    <div>
+      <span class="hero-tag">🌿 Método Comprovado · 30 Dias</span>
+      <h1>Emagreça. <span>Energize.</span> Transforme.</h1>
+      <p class="hero-sub">O guia prático com 7 capítulos, 30 dias de ações progressivas e os 3 pilares da saúde — sem dietas extremas, sem suplementos caros, sem passar fome.</p>
+
+      <ul class="hero-bullets">
+        <li>Plano alimentar realista para quem começa do zero</li>
+        <li>Receitas fáceis, saborosas e sem complicação</li>
+        <li>Rotina de movimento adaptada à sua realidade</li>
+        <li>Estratégias de recuperação e sono de qualidade</li>
+      </ul>
+
+      <a href="https://go.hotmart.com/S105879201N?dp=1" class="btn-hero">
+        Quero meu guia agora →
+      </a>
+      <p class="hero-guarantee">🔒 Garantia de 7 dias · Acesso imediato · Pagamento seguro</p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="stat-card">
+        <div class="stat-icon">📖</div>
+        <div>
+          <div class="stat-num">7</div>
+          <div class="stat-label">Capítulos transformadores</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div>
+          <div class="stat-num">30</div>
+          <div class="stat-label">Dias de ações progressivas</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🍽️</div>
+        <div>
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Receitas práticas incluídas</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏅</div>
+        <div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Pilares da saúde sustentável</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF BAR ── -->
+<div class="proof-bar">
+  ⭐⭐⭐⭐⭐ &nbsp; <strong>+2.400 pessoas</strong> já transformaram sua saúde com o Corpo em Equilíbrio &nbsp; — &nbsp; avaliação média de <strong>4.9/5</strong>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="problem-section">
+  <div class="section" style="padding-bottom: 5rem;">
+    <p class="section-tag">O Problema</p>
+    <h2 class="section-title">Você se identifica<br>com alguma dessas situações?</h2>
+    <p class="section-lead">Milhares de pessoas tentam emagrecer sem resultados — não por falta de vontade, mas por seguir o caminho errado.</p>
+
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <h3>Dietas impossíveis</h3>
+        <p>Começou mil dietas, parou na segunda semana e se sentiu uma fracassada. O problema não é você — é o método.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Energia no chão</h3>
+        <p>Acorda já cansada, mal consegue chegar ao fim do dia, muito menos pensar em academia.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Informação demais</h3>
+        <p>Um especialista fala para cortar carboidrato, outro diz que não. No fim, você não sabe o que fazer.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Sem tempo real</h3>
+        <p>Trabalho, filhos, casa — a vida não para. Planos mirabolantes não cabem na sua rotina.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT YOU GET ── -->
+<div class="section reveal">
+  <p class="section-tag">O Conteúdo</p>
+  <h2 class="section-title">7 Capítulos que<br>mudam de verdade</h2>
+  <p class="section-lead">Um plano construído do zero ao resultado, sem pular etapas e sem enrolação.</p>
+
+  <div class="chapters">
+    <div class="chapter">
+      <div class="chapter-num">01</div>
+      <div class="chapter-content">
+        <h3>Mentalidade & Ponto de Partida</h3>
+        <p>Entenda por que você falhou antes e reprograme sua relação com saúde e corpo.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">02</div>
+      <div class="chapter-content">
+        <h3>Alimentação sem Dieta</h3>
+        <p>O método de comer bem sem contar caloria, passar fome ou abrir mão do que você gosta.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">03</div>
+      <div class="chapter-content">
+        <h3>Receitas para Toda Semana</h3>
+        <p>Mais de 50 receitas práticas, saborosas e fáceis — café da manhã ao jantar.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">04</div>
+      <div class="chapter-content">
+        <h3>Movimento no dia a dia</h3>
+        <p>Exercícios adaptados para quem tem pouco tempo e começa do zero, sem precisar de academia.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">05</div>
+      <div class="chapter-content">
+        <h3>Sono & Recuperação</h3>
+        <p>O pilar esquecido: como dormir bem acelera o emagrecimento e restaura sua energia.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">06</div>
+      <div class="chapter-content">
+        <h3>Emoções & Compulsão</h3>
+        <p>Estratégias práticas para quebrar o ciclo de comer por ansiedade e estresse.</p>
+      </div>
+    </div>
+    <div class="chapter">
+      <div class="chapter-num">07</div>
+      <div class="chapter-content">
+        <h3>Plano de 30 Dias</h3>
+        <p>Ações progressivas, dia a dia, para criar hábitos que duram a vida toda.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PILLARS ── -->
+<section class="pillars-section">
+  <div class="section reveal">
+    <p class="section-tag" style="color:#a8d070;">Os 3 Pilares</p>
+    <h2 class="section-title" style="color:var(--white);">A base de tudo</h2>
+    <p class="section-lead" style="color:rgba(247,244,239,0.65);">Ignorar qualquer um desses pilares sabota qualquer tentativa de transformação duradoura.</p>
+
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-icon">🍽️</div>
+        <h3>Alimentação</h3>
+        <p>Comer bem não é comer pouco. Aprenda a nutrir seu corpo com prazer, saciedade e equilíbrio real.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏃‍♀️</div>
+        <h3>Movimento</h3>
+        <p>Mover o corpo não é punição. Descubra como criar uma rotina de exercícios que você vai gostar de fazer.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌙</div>
+        <h3>Recuperação</h3>
+        <p>Sono, gestão de estresse e descanso ativo: o segredo que separa quem mantém o peso de quem emagrece e engorda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<div class="section reveal">
+  <p class="section-tag">Resultados Reais</p>
+  <h2 class="section-title">Quem já transformou<br>a sua saúde</h2>
+
+  <div class="testimonials">
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">Perdi 6 kg em 28 dias sem passar fome nenhum dia. As receitas são incríveis e o plano é tão simples que consigo seguir mesmo com dois filhos pequenos.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AM</div>
+        <div>
+          <div class="testi-name">Ana M.</div>
+          <div class="testi-role">Professora, 34 anos · São Paulo</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">Depois de anos tentando dietas, finalmente entendi como funciona o meu corpo. Minha energia triplicou e ainda emagreci 8 kg em 5 semanas!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">CS</div>
+        <div>
+          <div class="testi-name">Cláudia S.</div>
+          <div class="testi-role">Enfermeira, 41 anos · Belo Horizonte</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">O capítulo sobre sono mudou tudo para mim. Nunca imaginei que dormir mal estava sabotando meu emagrecimento. Recomendo demais!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JP</div>
+        <div>
+          <div class="testi-name">Júlia P.</div>
+          <div class="testi-role">Empreendedora, 29 anos · Curitiba</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── BONUS ── -->
+<section class="bonus-section">
+  <div class="section reveal">
+    <p class="section-tag" style="color:#a8d070;">Bônus Exclusivos</p>
+    <h2 class="section-title" style="color:white;">Incluídos sem custo extra</h2>
+    <p class="section-lead" style="color:rgba(247,244,239,0.65);">Você não está comprando só um livro. Está investindo em um sistema completo de transformação.</p>
+
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <span class="tag">Bônus 1</span>
+        <h3>Lista de Compras das 4 Semanas</h3>
+        <p>Tudo que você precisa comprar, organizado por semana. Sem desperdício, sem improvisar.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="tag">Bônus 2</span>
+        <h3>Calculadora de Refeições</h3>
+        <p>Planilha interativa para montar suas refeições sem contar calorias manualmente.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="tag">Bônus 3</span>
+        <h3>Guia de Substituições</h3>
+        <p>Mais de 80 substituições inteligentes para adaptar qualquer receita ao seu gosto e necessidade.</p>
+      </div>
+      <div class="bonus-card">
+        <span class="tag">Bônus 4</span>
+        <h3>Rotina Matinal de 10 Minutos</h3>
+        <p>A rotina mínima viável para começar o dia com energia, mesmo acordando tarde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<div id="comprar" class="section pricing-section reveal">
+  <p class="section-tag">Investimento</p>
+  <h2 class="section-title">Comece hoje.<br>Resultados em 30 dias.</h2>
+  <p class="section-lead" style="margin: 0 auto;">Uma única vez. Acesso vitalício. Sem mensalidade.</p>
+
+  <div class="price-box">
+    <div class="price-header">
+      <h2>Corpo em Equilíbrio — Guia Completo</h2>
+      <p>7 capítulos + 4 bônus exclusivos + atualizações vitalícias</p>
+    </div>
+    <div class="price-body">
+      <div class="price-old">De R$ 197,00</div>
+      <div class="price-main">
+        <span class="price-currency">R$</span>
+        <span class="price-amount">47</span>
+        <span class="price-period">,00 · única vez</span>
+      </div>
+      <ul class="price-includes">
+        <li>Guia completo com 7 capítulos (PDF)</li>
+        <li>Plano de 30 dias passo a passo</li>
+        <li>Mais de 50 receitas práticas</li>
+        <li>4 bônus exclusivos</li>
+        <li>Atualizações gratuitas para sempre</li>
+        <li>Acesso imediato após pagamento</li>
+      </ul>
+      <a href="https://go.hotmart.com/S105879201N?dp=1" class="btn-buy">✅ Quero meu guia agora — R$ 47</a>
+    </div>
+    <div class="price-footer">
+      🔒 Pagamento 100% seguro &nbsp;·&nbsp; Cartão, boleto ou PIX &nbsp;·&nbsp; Acesso imediato
+    </div>
+  </div>
+</div>
+
+<!-- ── GUARANTEE ── -->
+<section class="guarantee-section">
+  <div class="section">
+    <div class="guarantee-inner reveal">
+      <div class="guarantee-badge">
+        <div class="big">7</div>
+        <div class="small">Dias de<br>Garantia</div>
+      </div>
+      <div>
+        <p class="section-tag">Garantia Total</p>
+        <h2 class="section-title" style="font-size: 2.2rem;">Risco zero para você</h2>
+        <p style="color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; max-width: 520px;">Se em 7 dias você não estiver satisfeita por qualquer motivo, devolvo 100% do seu dinheiro — sem perguntas, sem burocracia. Você tem apenas a transformar — o risco é todo meu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<div class="section reveal">
+  <p class="section-tag">Dúvidas Frequentes</p>
+  <h2 class="section-title">Perguntas & Respostas</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">Para quem é o Corpo em Equilíbrio? <span>+</span></button>
+      <div class="faq-a">Para qualquer pessoa que queira emagrecer, ganhar energia e adotar hábitos saudáveis — especialmente quem já tentou dietas e não conseguiu manter. Não é necessária nenhuma experiência prévia.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Como vou receber o material? <span>+</span></button>
+      <div class="faq-a">Imediatamente após a confirmação do pagamento, você recebe um e-mail com o link de acesso. O guia está disponível em PDF, podendo ser lido no celular, tablet ou computador.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Preciso seguir uma dieta rígida? <span>+</span></button>
+      <div class="faq-a">Não. O método foi criado justamente para quem não aguenta mais dietas restritivas. Você vai aprender a comer de forma equilibrada, com flexibilidade e sem passar fome.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">E se eu não gostar? <span>+</span></button>
+      <div class="faq-a">Você tem 7 dias de garantia total. Se não ficar satisfeita por qualquer motivo, é só entrar em contato e devolvemos 100% do valor — sem questionamentos.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quanto tempo preciso dedicar por dia? <span>+</span></button>
+      <div class="faq-a">O método foi pensado para se encaixar em uma rotina ocupada. Você vai precisar de apenas 15–20 minutos por dia para implementar as ações progressivas do plano.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <h2 class="section-title">Sua transformação<br>começa agora</h2>
+  <p class="section-lead">Pare de adiar o corpo e a saúde que você merece. Por R$ 47 — menos que um jantar — você tem o caminho completo em mãos.</p>
+  <a href="https://go.hotmart.com/S105879201N?dp=1" class="btn-hero">Quero começar hoje →</a>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2024 Corpo em Equilíbrio · Todos os direitos reservados</p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://go.hotmart.com/S105879201N?dp=1">Política de Privacidade</a> &nbsp;·&nbsp;
+    <a href="https://go.hotmart.com/S105879201N?dp=1">Termos de Uso</a> &nbsp;·&nbsp;
+    <a href="https://go.hotmart.com/S105879201N?dp=1">Contato</a>
+  </p>
+  <p style="margin-top:0.75rem; font-size:0.72rem; max-width:580px; margin-left:auto; margin-right:auto;">
+    Este produto não garante resultados específicos. Os resultados variam de pessoa para pessoa. Os depoimentos apresentados são experiências individuais. Consulte um profissional de saúde antes de iniciar qualquer programa de alimentação ou exercícios.
+  </p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
